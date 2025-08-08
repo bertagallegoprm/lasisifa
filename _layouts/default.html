@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | Silkenwoods</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+</head>
+<body>
+  <header>
+    <a href="/"><img src="/assets/images/logo.png" alt="Silkenwoods Logo" height="60"></a>
+    <nav>
+      <ul>
+        {% if page.url contains '/es/' %}
+          <li><a href="/es/">Inicio</a></li>
+          <li><a href="/es/about.html">Sobre mí</a></li>
+          <li><a href="/es/archive.html">Archivo</a></li>
+          <li><a href="/en/">English</a></li>
+        {% else %}
+          <li><a href="/en/">Home</a></li>
+          <li><a href="/en/about.html">About</a></li>
+          <li><a href="/en/archive.html">Archive</a></li>
+          <li><a href="/es/">Español</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+</body>
+</html>
